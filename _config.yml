@@ -1,8 +1,8 @@
 # Site settings
 title: Kyle Frick's Portfolio
 description: Kyle Frick's Portfolio
-favicon: /assets/img/avatar.JPG
-baseurl: https://themrfrick.github.io
+favicon: /assets/img/avatar.jpg
+# baseurl: https://themrfrick.github.io
 # url: https://ddbullfrog.github.io/resumecard
 rss_url: /pages/atom.xml
 google_analytics: UA-141674035-1
