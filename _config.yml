@@ -1,0 +1,112 @@
+# Site settings
+title: Kyle Frick's Portfolio
+description: Kyle Frick's Portfolio
+favicon: /assets/img/avatar.JPG
+# baseurl: https://ddbullfrog.github.io/resumecard
+# url: https://ddbullfrog.github.io/resumecard
+rss_url: /pages/atom.xml
+google_analytics: UA-141674035-1
+
+# Build settings
+markdown: kramdown
+
+exclude: [vendor]
+
+# Author settings
+author:
+  name: Kyle Frick
+  title: Computer Scientist
+  address: Bay City, Texas
+  email: themrfrick@gmail.com
+  link: 
+  weibo:
+  github: themrfrick
+  linkedin: themrfrick
+  twitter: themrfrick
+  gavatar: /resumecard/assets/img/avatar.JPG
+  stackoverflow:
+#  stackoverflow: 4582127
+  workHistory:
+    - work1:
+      company: Rutgers University
+      location: New Brunswick, New Jersey
+      title: Office of Information Consultant 
+      started: 2018
+      duration: (2018 - Present)
+      description: Rutgers Office of Information Technology aids the Rutgers populous with technical troubleshooting of internal networks, software, hardware and printing services.I assist patrons with issues such as internet connectivity, printing, and general computer issues. I am a certified in Residential Network Dispatch. Responsible for network troubleshooting through dispatch and walk-in appointments. I am ertified as a Level 1 Help Desk consultant. Responsible for over the phone troubleshooting with the Rutgers populous.
+    - work2:
+      company: Federation of Workers and Employers of America
+      location: Bay City, Texas
+      title: IT Specialist
+      started: 2016
+      duration: (2016 - 2017)
+      description: Federation of Workers and Employers of America (FEWA) is a non-profit company that aids in the H2-A and H2-B process with companies. During my time with FEWA I maintained the health of a single server with 20 computers attached to the infrastructure, repaired and forged new APEX functions for their Salesforce Environment. I aided in the transition from the Classic Salesforce environment to the Lightning Salesforce Environment. I primarily used Node.JS, HTML/CSS, Java and APEX to build and adjust applications.
+    - work3:
+      company: Chegg 
+      location: Online
+      title: Tutor
+      started: 2015
+      duration: (2015 - 2017)
+      description: Chegg is an online tutoring and general help site for high school and college students. As a tutor I designed personalized tutoring schedules with 76 students. Tutoring sessions were either a one-time session or weekly sessions. Tutored students in Computer Science, Mathematics (Calculus II and below), Physics, Chemistry, and Spanish. 
+  educationHistory:
+    - education1:
+      organization: Rutgers University 
+      location: New Brunswick, New Jersey
+      degree: Bachelor's of Science
+      major: Computer Science
+      started: 2017
+      duration: (2017 - 2019)
+      description: Graduated in August 2019
+    - education2: 
+      organization: Wentworth Institute of Technology
+      location: Boston, Massachussetts
+      degree: Bachelor's of Science
+      major: Computer Science
+      started: 2015
+      duration: (2015 - 2016)
+      description:
+  languages:
+    - language1:
+      name: English
+      proficiency: Native
+    - language2:
+      name: Spanish
+      proficiency: Intermediate
+    - language3:
+      name: Japanese
+      proficiency: Limit
+    - language4:
+      name: Korean
+      proficiency: Limit
+    - language5: 
+      name: Italian
+      proficiency: Limit
+  programmingSkills:
+    - skill1:
+      name: Java
+      percentage: 100%
+    - skill2:
+      name: HTML5/CSS3
+      percentage: 90%
+    - skill3:
+      name: JavaScript
+      percentage: 85%
+    - skill4:
+      name: Node.js
+      percentage: 80%
+    - skill5:
+      name: Python
+      percentage: 60%
+    - skill6: 
+      name: SQL
+      percentage: 50%
+    - skill7:
+      name: Golang
+      percentage: 50%
+    - skill8:
+      name: C++
+      percentage: 75%
+    - skill9: 
+      name: C
+      percentage: 75%
+      
