@@ -89,6 +89,45 @@ layout: default
                     {% endfor %}
                 </ul>
             {% endif %}
+            {% if site.author.Projects %}
+              <h3 class="title with-icon"><span class= "fa fa-folder-open cat-title"></span> Projects </h3>
+              <ul class="timeline">
+                {% for project in site.author.Projects %}
+                <li class="timeline-inverted">
+                  {% if project.created %}
+                    <div class="timeline-badge info">{{ project.created }}</div>
+                  {% endif %}
+                  <div class="timeline-panel grid-block">
+                      <div class="timeline-heading">
+                          {% if project.name %}
+                              <h4 class="timeline-title">{{ project.name }}</h4>
+                          {% endif %}
+                          <p>
+                              <small class="text-muted">
+                                  {% if project.type %}
+                                      {{ project.type }}
+                                  {% endif %}
+                              </small>
+                          </p>
+                          <p>
+                              <small class="text-muted">
+                                Languages | 
+                                  {% if project.languages %}
+                                      <i class="fa fa-code"></i> {{ project.languages }} 
+                                  {% endif %}
+                              </small>
+                          </p>
+                      </div>
+                      <div class="timeline-body">
+                          {% if project.description %}
+                              <p>{{ project.description }}</p>
+                          {% endif %}
+                      </div>
+                  </div>
+                </li>
+                {% endfor %}
+              </ul>
+            {% endif %}
         </div>
         <div class="col-md-4">
             {% if site.author.stackoverflow or site.author.programmingSkills %}
