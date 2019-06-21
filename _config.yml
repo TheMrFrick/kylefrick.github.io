@@ -57,14 +57,16 @@ author:
       started: 2017
       duration: (2017 - 2019)
       description: Graduated in August 2019
+      link: pages/rutgers.html
     - education2: 
       organization: Wentworth Institute of Technology
       location: Boston, Massachussetts
-      degree: Bachelor's of Science
+      degree:
       major: Computer Science
       started: 2015
       duration: (2015 - 2016)
       description:
+      link: 
   languages:
     - language1:
       name: English
@@ -130,7 +132,7 @@ author:
       languages: JavaFX, Java 8
       created: 2019
       description: The photo library allows users to view, add/edit descriptions and tag the photos displayed within it. The photo library is a consistent program that serializes the information of the photos within it. The photos are not stored within the program itself, but the location of where the photo is on the system is stored, therefore if a photo is added to the program and moved to a new location within the file system, it will no longer appear within the program.
-      link:
+      link: 
       type: School Project - Software Methodology
     - project5: 
       name: Song Library
@@ -154,4 +156,65 @@ author:
       link:
       type: School Project - Computer Science II (C++ and Java)
     
-      
+
+# Rutgers Page Settings      
+rutgers:
+
+  name: Rutgers University
+  attended: August 2017 - August 2019
+  degree: Bachelor of Science in Computer Science
+
+  Semesters:
+    - semester1:
+      name: 2017
+      Courses:
+        - course1:
+          name: Data Structures
+          content: To investigate the essential properties of data structures and algorithms for operating on them; to use these structures as tools to assist algorithm design; to extend exposure to searching, sorting and hashing techniques.
+          Projects:
+            project1:
+              name: test
+          final_grade: test
+
+    # - semester2:
+    #   name: Spring 2018
+    #   courses:
+    #       - course1:
+    #         name:
+    #         content:
+    #         projects:
+    #         final_grade:
+
+    # - semester3:
+    #   name: Summer 2018
+    #   courses:
+    #       - course1:
+    #         name: Dinosaurs
+    #         content:
+    #         projects:
+    #         final_grade:
+
+    # - semester4:
+    #   name: Fall 2018
+    #   courses:
+    #     - course1:
+    #       name:
+    #       content:
+    #       projects:
+    #       final_grade:
+    # semester5:
+    #   name: Spring 2019
+    #     courses:
+    #       course1:
+    #       name:
+    #       content:  
+    #       projects:
+    #       final_grade:
+    # semester6:
+    #   name: Summer 2019
+    #   courses:
+    #       course1:
+    #       name:
+    #       content:
+    #       projects:
+    #       final_grade: 
