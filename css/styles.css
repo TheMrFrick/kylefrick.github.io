@@ -14,11 +14,31 @@ h4{
   user-select: none;
 }
 
+#mini-navbar {
+  display:none!important;
+  width:4.5rem;
+}
+
+#full-navbar {
+  width:280px;
+}
+
 @media (min-width: 768px) {
   .bd-placeholder-img-lg {
     font-size: 3.5rem;
   }
 }
+
+@media (max-width: 768px) {
+  #full-navbar {
+    display: none!important;
+  }
+
+  #mini-navbar {
+    display:flex!important;
+  }
+}
+
 
 .b-example-divider {
   height: 3rem;

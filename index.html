@@ -18,12 +18,12 @@
 <body>
     <main class="d-flex flex-nowrap">
         <!-- nav bar-->
-        <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark" style="width: 280px;">
+        <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark full-navbar" id="full-navbar">
             <a href="#home" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
                 <span class="fs-4">Kyle Frick</span>
             </a>
             <hr>
-            <ul class="nav nav-pills flex-column mb-auto">
+            <ul class="nav nav-pills flex-column mb-auto" id="navbar-content">
                 <li class="nav-item">
                     <a href="#technical-knowledge" class="nav-link text-white">
                         Technical Knowledge
@@ -52,6 +52,35 @@
 
             </ul>
         </div>
+
+        <div class="d-flex flex-column flex-shrink-0 bg-dark" id="mini-navbar">
+            <a href="#home" class="d-block p-3 link-dark text-decoration-none text-center" title="Icon-only" data-bs-toggle="tooltip" data-bs-placement="right">
+                <img src="img/icons/home.png" alt="home icon">
+            </a>
+            <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+              <li class="nav-item">
+                <a href="#technical-knowledge" class="nav-link py-3 border-bottom rounded-0" aria-current="page" title="Technical Knowledge" data-bs-toggle="tooltip" data-bs-placement="right">
+                  <img src="img/icons/creativity.png">
+                </a>
+              </li>
+              <li>
+                <a href="#project-dbs-deckplanet" class="nav-link py-3 border-bottom rounded-0" title="DBS Deckplanet" data-bs-toggle="tooltip" data-bs-placement="right">
+                    <img src="img/icons/deckplanet_icon.png" height="24" width="24">                </a>
+              </li>
+              <li>
+                <a href="#dragon-ball-ccg-database" class="nav-link py-3 border-bottom rounded-0" title="Dragon Ball CCG Database" data-bs-toggle="tooltip" data-bs-placement="right">
+                    <img src="img/icons/api.png">                </a>
+              </li>
+              <li>
+                <a href="#dragon-ball-ccg-collection" class="nav-link py-3 border-bottom rounded-0" title="Dragon Ball CCG Collection" data-bs-toggle="tooltip" data-bs-placement="right">
+                    <img src="img/icons/clubs.png">                </a>
+              </li>
+              <li>
+                <a href="#bandai-card-scraper" class="nav-link py-3 border-bottom rounded-0" title="Customers" data-bs-toggle="tooltip" data-bs-placement="right">
+                    <img src="img/projects/data-mining.png" height="24" width="24">                </a>
+              </li>
+            </ul>
+          </div>
 
         <div class="b-example-divider b-example-vr"></div>
 
@@ -185,7 +214,8 @@
             <!-- Projects -->
             <div class="section" id="project-dbs-deckplanet">
                 <h1>DBS-DeckPlanet</h1>
-                <img src="img/projects/dbs-deckplanet.png" alt="dbs-deckplanet" height="450" class="mb-3 img-fluid rounded">
+                <img src="img/projects/dbs-deckplanet.png" alt="dbs-deckplanet" height="450"
+                    class="mb-3 img-fluid rounded">
                 <div class="container">
                     <p class="lead">
                         DBS-Deckplanet is a deck-building website for the game Dragon Ball Super Collectible Card Game.
@@ -201,51 +231,62 @@
 
             <div class="section colored" id='dragon-ball-ccg-database'>
                 <h1>Dragon Ball Super CCG Database</h1>
-                <img src="img/projects/dbs-ccg-db.png" alt="Dragon Ball Super CCG Database API Response" height="450" class="mb-3 img-fluid rounded">
+                <img src="img/projects/dbs-ccg-db.png" alt="Dragon Ball Super CCG Database API Response" height="450"
+                    class="mb-3 img-fluid rounded">
                 <div class="container">
                     <p class="lead">
-                        Dragon Ball Super CCG Database is a database of Dragon Ball Super Cards API that is built similar to
-                        Scryfall's API. It contains all the cards prior to the latest Zenkai expansion (releases Q4 2022).
-                        End User's can query the database using a GET request with `q=` on the API endpoint `/cards/search`.
+                        Dragon Ball Super CCG Database is a database of Dragon Ball Super Cards API that is built
+                        similar to
+                        Scryfall's API. It contains all the cards prior to the latest Zenkai expansion (releases Q4
+                        2022).
+                        End User's can query the database using a GET request with `q=` on the API endpoint
+                        `/cards/search`.
                         <br>
                         <em>This is currently an MVP for another project of mine.</em>
                         <br>
-                        <p style="text-align:left">
-                            Planned updates:
-                            <ul style="text-align:left">
-                                <li>Additional Endpoints closer to the Scryfall API</li>
-                                <li>Updated Schema to the cards with the new Zenkai card attributes</li>
-                                <li>Zenkai Cards to be added</li>
-                            </ul>
-                        </p>
+                    <p style="text-align:left">
+                        Planned updates:
+                    <ul style="text-align:left">
+                        <li>Additional Endpoints closer to the Scryfall API</li>
+                        <li>Updated Schema to the cards with the new Zenkai card attributes</li>
+                        <li>Zenkai Cards to be added</li>
+                    </ul>
+                    </p>
                     </p>
                     <button class="btn btn-dark">
-                        <a href="https://dbs-ccg-database.herokuapp.com/cards/search?q=son" target="_blank">Dragon Ball Database</a>
+                        <a href="https://dbs-ccg-database.herokuapp.com/cards/search?q=son" target="_blank">Dragon Ball
+                            Database</a>
                     </button>
                 </div>
             </div>
 
             <div class="section" id="dragon-ball-ccg-collection">
                 <h1>Dragon Ball Super CCG Collection</h1>
-                <img src="img/projects/dbs-ccg-collection.PNG" alt="Screenshot of adding cards to collection from the database" height="450" class="mb-3 img-fluid rounded">
+                <img src="img/projects/dbs-ccg-collection.PNG"
+                    alt="Screenshot of adding cards to collection from the database" height="450"
+                    class="mb-3 img-fluid rounded">
                 <div class="container">
                     <p class="lead">
-                        Dragon Ball Super CCG Collection is a web application to track and store your personal collection of Dragon Ball Super CCG cards!
-                        It utilizes the <a href='#dragon-ball-ccg-database'>Dragon Ball Super CCG Database</a> to search for cards based on the user's input.
-                        Additionally, if you have a Deck List that you want to see if you can make with your collection, there is an easy 2-step process for that too!
-                        Check out your collection on the fly on your mobile device with the Dragon Ball Super CCG Collection web app!
+                        Dragon Ball Super CCG Collection is a web application to track and store your personal
+                        collection of Dragon Ball Super CCG cards!
+                        It utilizes the <a href='#dragon-ball-ccg-database'>Dragon Ball Super CCG Database</a> to search
+                        for cards based on the user's input.
+                        Additionally, if you have a Deck List that you want to see if you can make with your collection,
+                        there is an easy 2-step process for that too!
+                        Check out your collection on the fly on your mobile device with the Dragon Ball Super CCG
+                        Collection web app!
                         <br>
                         <em>Application is still under construction.</em>
                         <br>
-                        <p style="text-align:left">
-                            Planned updates:
-                            <ul style="text-align:left">
-                                <li>Ability to remove cards from collection</li>
-                                <li>Importable web-link from dbs-deckplanet deck list to check against collection</li>
-                                <li>More Mobile accessibility</li>
-                                <li>Aesthetic changes</li>
-                            </ul>
-                        </p>
+                    <p style="text-align:left">
+                        Planned updates:
+                    <ul style="text-align:left">
+                        <li>Ability to remove cards from collection</li>
+                        <li>Importable web-link from dbs-deckplanet deck list to check against collection</li>
+                        <li>More Mobile accessibility</li>
+                        <li>Aesthetic changes</li>
+                    </ul>
+                    </p>
                     </p>
                     <button class="btn btn-light">
                         <a href="https://dbs-ccg-owner-db.herokuapp.com/" target="_blank">Dragon Ball Collection</a>
@@ -255,31 +296,37 @@
 
             <div class="section colored" id="bandai-card-scraper">
                 <h1>Bandai TCG+ Card Scraper</h1>
-                <img src="img/projects/data-mining.png" alt="Data mine icon sourced from prettycon" class="mb-3 img-fluid rounded">
+                <img src="img/projects/data-mining.png" alt="Data mine icon sourced from prettycon"
+                    class="mb-3 img-fluid rounded">
                 <div class="container">
                     <p class="lead">
-                        The Bandai TCG+ Card Scraper is a tool to automatically make all the necessary API calls to the new Bandai TCG+ Card Database
-                        that was released in Q3 of 2022. The new database replaces the previous multitude of linked webpages that Bandai previously
+                        The Bandai TCG+ Card Scraper is a tool to automatically make all the necessary API calls to the
+                        new Bandai TCG+ Card Database
+                        that was released in Q3 of 2022. The new database replaces the previous multitude of linked
+                        webpages that Bandai previously
                         used to showcase all the Dragon Ball Super, Digimon, and One Piece cards.
-                        With the use of this tool, obtain all the cards of a given game in JSON format for later personal use!
+                        With the use of this tool, obtain all the cards of a given game in JSON format for later
+                        personal use!
                         <br>
                         <em>
-                            This was a forked repository from the old website that showcased all the cards and has been updated to utilize
+                            This was a forked repository from the old website that showcased all the cards and has been
+                            updated to utilize
                             TypeScript and the new Bandai TCG+ database.
                         </em>
                         <br>
                         <em>Scraper is under Github migration and updates.</em>
                         <br>
-                        <p style="text-align:left">
-                            Planned updates:
-                            <ul style="text-align:left">
-                                <li>Ability to select each card game</li>
-                                <li>Progress updates while scraping the cards</li>
-                            </ul>
-                        </p>
+                    <p style="text-align:left">
+                        Planned updates:
+                    <ul style="text-align:left">
+                        <li>Ability to select each card game</li>
+                        <li>Progress updates while scraping the cards</li>
+                    </ul>
+                    </p>
                     </p>
                     <button class="btn btn-dark">
-                        <a href="https://github.com/TheMrFrick/dbs-scraper" target="_blank" rel="noopener noreferrer">Github Repo</a>
+                        <a href="https://github.com/TheMrFrick/dbs-scraper" target="_blank"
+                            rel="noopener noreferrer">Github Repo</a>
                     </button>
                 </div>
             </div>
