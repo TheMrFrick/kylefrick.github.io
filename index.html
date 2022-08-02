@@ -1,302 +1,295 @@
----
-layout: default
----
-<div class="container-fluid">
-    <div class="row-fluid">
-        <div class="col-md-8">
-            {% if site.author.workHistory %}
-                <h3 class="title with-icon"><span class="glyphicon glyphicon-plane cat-title"></span>Work History</h3>
-                <ul class="timeline">
-                    {% for work in site.author.workHistory %}
-                        <li class="timeline-inverted">
-                            {% if work.started %}
-                                <div class="timeline-badge info">{{ work.started }}</div>
-                            {% endif %}
-                            <div class="timeline-panel grid-block">
-                                <div class="timeline-heading">
-                                    {% if work.company %}
-                                        <h4 class="timeline-title">{{ work.company }} </h4>
-                                    {% endif %}
-                                    <p>
-                                        <small class="text-muted">
-                                            {% if work.title %}
-                                                {{ work.title }}
-                                            {% endif %}
-                                        </small>
-                                    </p>
-                                    <p>
-                                        <small class="text-muted">
-                                            {% if work.duration %}
-                                                <i class="fa fa-calendar"></i> {{ work.duration }} |
-                                            {% endif %}
-                                            {% if work.location %}
-                                                <i class="fa fa-map-marker"></i>  {{ work.location }}
-                                            {% endif %}
-                                        </small>
-                                    </p>
-                                </div>
-                                <div class="timeline-body">
-                                    {% if work.description %}
-                                        <p>{{ work.description }}</p>
-                                    {% endif %}
-                                </div>
-                            </div>
-                        </li>
-                    {% endfor %}
-                </ul>
-            {% endif %}
-            {% if site.author.educationHistory %}
-                <h3 class="title with-icon"><span class="fa fa-book cat-title"></span>Education History</h3>
-                <ul class="timeline">
-                    {% for education in site.author.educationHistory %}
-                        <li class="timeline-inverted">
-                            {% if education.started %}
-                                <div class="timeline-badge info">{{ education.started }}</div>
-                            {% endif %}
-                            <div class="timeline-panel grid-block">
-                                <div class="timeline-heading">
-                                    {% if education.organization %}
-                                        <h4 class="timeline-title">{{ education.organization }}</h4>
-                                    {% endif %}
-                                    <p>
-                                        <small class="text-muted">
-                                            {% if education.degree %}
-                                                {{ education.degree }},
-                                            {% endif %}
-                                            {% if education.major %}
-                                                 {{ education.major }}
-                                            {% endif %}
-                                        </small>
-                                    </p>
-                                    <p>
-                                        <small class="text-muted">
-                                            {% if education.duration %}
-                                                <i class="fa fa-calendar"></i> {{ education.duration }} |
-                                            {% endif %}
-                                            {% if education.location %}
-                                                <i class="fa fa-map-marker"></i>  {{ education.location }}
-                                            {% endif %}
-                                        </small>
-                                    </p>
-                                </div>
-                                <div class="timeline-body">
-                                    {% if education.description %}
-                                        <p>{{ education.description }}</p>
-                                    {% endif %}
-                                </div>
-                            </div>
-                        </li>
-                    {% endfor %}
-                </ul>
-            {% endif %}
-            {% if site.author.Projects %}
-              <h3 class="title with-icon"><span class= "fa fa-folder-open cat-title"></span> Projects </h3>
-              <ul class="timeline">
-                {% for project in site.author.Projects %}
-                <li class="timeline-inverted">
-                  {% if project.created %}
-                    <div class="timeline-badge info">{{ project.created }}</div>
-                  {% endif %}
-                  <div class="timeline-panel grid-block">
-                      <div class="timeline-heading">
-                          {% if project.name %}
-                              <h4 class="timeline-title">{{ project.name }}</h4>
-                          {% endif %}
-                          <p>
-                              <small class="text-muted">
-                                  {% if project.type %}
-                                      {{ project.type }}
-                                  {% endif %}
-                              </small>
-                          </p>
-                          <p>
-                              <small class="text-muted">
-                                Languages | 
-                                  {% if project.languages %}
-                                      <i class="fa fa-code"></i> {{ project.languages }} 
-                                  {% endif %}
-                              </small>
-                          </p>
-                      </div>
-                      <div class="timeline-body">
-                          {% if project.description %}
-                              <p>{{ project.description }}</p>
-                          {% endif %}
-                      </div>
-                  </div>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#712cf9">
+
+    <!-- CSS Only  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <title>TheMrFrick</title>
+</head>
+
+<body>
+    <main class="d-flex flex-nowrap">
+        <!-- nav bar-->
+        <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark" style="width: 280px;">
+            <a href="#home" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                <span class="fs-4">Kyle Frick</span>
+            </a>
+            <hr>
+            <ul class="nav nav-pills flex-column mb-auto">
+                <li class="nav-item">
+                    <a href="#technical-knowledge" class="nav-link text-white">
+                        Technical Knowledge
+                    </a>
                 </li>
-                {% endfor %}
-              </ul>
-            {% endif %}
+                <li class="nav-item">
+                    <a href="#project-dbs-deckplanet" class="nav-link text-white">
+                        DBS-DeckPlanet
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#dragon-ball-ccg-database" class="nav-link text-white">
+                        Dragon Ball CCG Database
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#dragon-ball-ccg-collection" class="nav-link text-white">
+                        Dragon Ball CCG Collection
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#bandai-card-scraper" class="nav-link text-white">
+                        Bandai TCG+ Card Scraper
+                    </a>
+                </li>
+
+            </ul>
         </div>
-        <div class="col-md-4">
-            {% if site.author.stackoverflow or site.author.programmingSkills %}
-                <h3 class="title with-icon"><span class="fa fa-code cat-title"></span> Programming Skills</h3>
-                {% if site.author.stackoverflow %}
-                <div class="grid-block">
-                  <p><a href="//stackoverflow.com/users/{{ site.author.stackoverflow }}"><img src="//stackoverflow.com/users/flair/{{ site.author.stackoverflow }}.png"></a></p>
-                  <ul class="list-unstyled list-stackoverflow" id="stackoverflow_questions_and_answers"></ul>
-                  <script type="text/javascript">
-                  $(function () {
-                    var api_url_user = "//api.stackexchange.com/2.2/users/{{ site.author.stackoverflow }}/answers?pagesize=5&order=desc&sort=votes&site=stackoverflow";
-                    var api_url_format_questions = "//api.stackexchange.com/2.2/questions/%question_ids%?site=stackoverflow";
 
-                    $.get(api_url_user, function (data_user) {
-                      if (!data_user) {
-                        return;
-                      }
-                      if (!data_user.items) {
-                        return;
-                      }
-                      if (!data_user.items.length) {
-                        return;
-                      }
+        <div class="b-example-divider b-example-vr"></div>
 
-                      var question_ids = [];
-                      var complex_questions = {};
-                      $.each(data_user.items, function (index, item) {
-                        if (!item) {
-                          return;
-                        }
-                        if (!item.question_id) {
-                          return;
-                        }
-                        if (!item.answer_id) {
-                          return;
-                        }
-                        if (!item.score) {
-                          return;
-                        }
+        <!-- Real Content  -->
+        <div class="container-fluid remove-padding">
 
-                        complex_questions[item.question_id] = {
-                          "question_id": item.question_id,
-                          "answer_id": item.answer_id,
-                          "score": humanize_score(item.score),
-                          "is_accepted": item.is_accepted
-                        };
-                        question_ids.push(item.question_id);
-                      });
+            <!-- Home Section -->
+            <div class="section" id="home">
+                <img class="portrait" src="img/portrait.png" alt="" srcset="">
+                <h1>Hello 👋</h1>
+                <p>My name is <strong>Kyle Frick</strong> and I'm a <strong>Software Engineer.</strong></p>
+                <p>Below you will find technologies that I'm familiar with along with projects that I've worked on!</p>
+            </div>
 
-                      var api_url_questions = api_url_format_questions.replace('%question_ids%', question_ids.join(';'));
+            <!-- Technical Knowledge Section -->
+            <div class="section colored" id="technical-knowledge">
+                <h1>Technical Knowledge</h1>
 
-                      $.get(api_url_questions, function (data_questions) {
-                        if (!data_questions) {
-                          return;
-                        }
-                        if (!data_questions.items) {
-                          return;
-                        }
-                        if (!data_questions.items.length) {
-                          return;
-                        }
-
-                        $.each(data_questions.items, function (index, item) {
-                          if (!item) {
-                            return;
-                          }
-                          if (!item.question_id) {
-                            return;
-                          }
-                          var complex_question = complex_questions[item.question_id];
-                          if (!complex_question) {
-                            return;
-                          }
-
-                          complex_question.title = item.title;
-                          complex_question.link = item.link;
-                        });
-
-                        render_complex_questions(complex_questions);
-                      });
-                    });
-                  });
-                  function humanize_score(score) {
-                    if (!score) {
-                      return;
-                    }
-
-                    if (score / 1000 > 1) {
-                      return (score / 1000) + "k";
-                    } else {
-                      return score;
-                    }
-                  }
-                  function render_complex_questions(complex_questions) {
-                    if (!complex_questions) {
-                      return;
-                    }
-
-                    complex_questions = $.map(complex_questions, function (complex_question) {
-                      return [complex_question];
-                    });
-                    complex_questions.sort(function (a, b) {
-                      return b.score - a.score;
-                    });
-
-                    $stackoverflow_questions_and_answers = $('#stackoverflow_questions_and_answers');
-
-                    $.each(complex_questions, function (index, complex_question) {
-                      var link = complex_question.link + '#answer-' + complex_question.answer_id;
-                      var $li = $('<li />');
-                      $('<span />')
-                        .addClass('badge')
-                        .addClass(complex_question.is_accepted ? 'progress-bar-success' : '')
-                        .text(complex_question.score)
-                        .appendTo($li);
-                      $('<a />')
-                        .attr('href', link)
-                        .attr('target', '_blank')
-                        .text(complex_question.title)
-                        .appendTo($li);
-                      $li.appendTo($stackoverflow_questions_and_answers);
-                    });
-                  }
-                  </script>
+                <h4>Current Tech Stack</h4>
+                <div class="container icons">
+                    <div class="row">
+                        <div class="col-md-2 col-sm-12">
+                            <img alt="TypeScript"
+                                src="https://raw.githubusercontent.com/vscode-icons/vscode-icons/master/icons/file_type_typescript_official.svg"
+                                height="70" width="70">
+                            <p>Typescript</p>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                            <img alt="Node"
+                                src="https://raw.githubusercontent.com/vscode-icons/vscode-icons/master/icons/file_type_node.svg"
+                                height="70" width="70">
+                            <p>Node</p>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                            <img alt="React" src="img/logos/logo-react-icon.png" height="70" width="70">
+                            <p>React</p>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                            <img src="img/logos/mongodb.png" alt="MongoDB" height="70" width="70">
+                            <p>MongoDB</p>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                            <img src="img/logos/Postgresql_elephant.svg.png" alt="PostGres" height="70" width="70">
+                            <p>PostgreSQL</p>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                            <img src="img/logos/docker.png" alt="Docker" height="70" width="70">
+                            <p>Docker</p>
+                        </div>
+                    </div>
                 </div>
-                {% endif %}
-                {% if site.author.programmingSkills %}
-                <div class="grid-block">
-                    <ul class="list-unstyled list-skills">
-                        {% for programmingSkill in site.author.programmingSkills %}
-                            <li>
-                                {% if programmingSkill.name %}
-                                    <span class="caption-skill">{{ programmingSkill.name }}</span>
-                                {% endif %}
-                                {% if programmingSkill.percentage %}
-                                    <div class="progress">
-                                        <div class="progress-bar" style="width: {{ programmingSkill.percentage }}">
-                                            <span>{{ programmingSkill.percentage }} </span>
-                                        </div>
-                                    </div>
-                                {% endif %}
-                            </li>
-                        {% endfor %}
-                    </ul>
+
+                <h4>Programming Languages</h4>
+                <div class="container icons">
+                    <div class="row">
+                        <div class="col-md-2 col-sm-12">
+                            <img alt="TypeScript"
+                                src="https://raw.githubusercontent.com/vscode-icons/vscode-icons/master/icons/file_type_typescript_official.svg"
+                                height="70" width="70">
+                            <p>Typescript</p>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                            <img alt="CSS" src="img/logos/CSS3_logo.svg.png" height="70" width="70">
+                            <p>CSS</p>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                            <img alt="Javascript" src="img/logos/Unofficial_JavaScript_logo_2.svg.png" height="70"
+                                width="70">
+                            <p>Javascript</p>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                            <img alt="Golang" src="img/logos/go.png" height="70" width="70">
+                            <p>Golang</p>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                            <img alt="C#" src="img/logos/c_sharp.png" height="70" width="70">
+                            <p>C#</p>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                            <img alt="Java" src="img/logos/java.png" height="70" width="70">
+                            <p>Java</p>
+                        </div>
+                        <div class="col-md-12 col-sm-12">
+                            <img alt="HTML" src="img/logos/html.png" height="70" width="70">
+                            <p>HTML</p>
+                        </div>
+                    </div>
                 </div>
-                {% endif %}
-            {% endif %}
-            {% if site.author.languages %}
-                <div class="deviter"></div>
-                <h3 class="title with-icon"><span class="fa fa-globe cat-title"></span> Language Skills</h3>
-                <div class="grid-block">
-                    <ul class="list-unstyled list-strip">
-                        {% for language in site.author.languages %}
-                            {% if language.name %}
-                                {% if language.proficiency %}
-                                    <li>
-                                        <i class="fa fa-check"></i> <span class="badge badge-green badge-right-float">{{ language.proficiency }}</span>{{ language.name }}
-                                    </li>
-                                {% endif %}
-                            {% endif %}
-                        {% endfor %}
-                    </ul>
+
+                <h4>Frameworks</h4>
+                <div class="container icons">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-12">
+                            <img alt="Node"
+                                src="https://raw.githubusercontent.com/vscode-icons/vscode-icons/master/icons/file_type_node.svg"
+                                height="70" width="70">
+                            <p>Node</p>
+                        </div>
+                        <div class="col-md-3 col-sm-12">
+                            <img alt="React" src="img/logos/logo-react-icon.png" height="70" width="70">
+                            <p>React</p>
+                        </div>
+                        <div class="col-md-3 col-sm-12">
+                            <img alt="Bootstrap" src="img/logos/Bootstrap_logo.svg.png" height="70" width="70">
+                            <p>Bootstrap</p>
+                        </div>
+                        <div class="col-md-3 col-sm-12">
+                            <img alt="Semantic UI" src="img/logos/semantic.png" height="70" width="70">
+                            <p>Semantic UI</p>
+                        </div>
+                    </div>
                 </div>
-            {% endif %}
-            <div class="deviter"></div>
-            <h3 class="title with-icon"><span class="fa fa-location-arrow cat-title"></span> Location</h3>
-            <div class="grid-block">
-                <iframe src="https://www.google.com/maps/embed/v1/place?q={{ site.author.address }}&key=AIzaSyClEWLh20lxrQBFR7omuuVESviszPxONyk" width="100%" height="100%" frameborder="0" style="border:0"></iframe>
+
+                <h4>Databases</h4>
+                <div class="container icons">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12">
+                            <img src="img/logos/mongodb.png" alt="MongoDB" height="70" width="70">
+                            <p>MongoDB</p>
+                        </div>
+                        <div class="col-md-6 col-sm-12">
+                            <img src="img/logos/Postgresql_elephant.svg.png" alt="PostGres" height="70" width="70">
+                            <p>PostgreSQL</p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- Projects -->
+            <div class="section" id="project-dbs-deckplanet">
+                <h1>DBS-DeckPlanet</h1>
+                <img src="img/projects/dbs-deckplanet.png" alt="dbs-deckplanet" height="450" class="mb-3 img-fluid rounded">
+                <div class="container">
+                    <p class="lead">
+                        DBS-Deckplanet is a deck-building website for the game Dragon Ball Super Collectible Card Game.
+                        I am a supporting developer for the website, making sure that it stays up to date with the
+                        latest cards,
+                        fixing bugs, and aiding in the development of new features that are displayed on their road map.
+                    </p>
+                </div>
+                <button class="btn btn-light">
+                    <a href="http://dbs-deckplanet.com" target="_blank">DBS-DeckPlanet.com</a>
+                </button>
+            </div>
+
+            <div class="section colored" id='dragon-ball-ccg-database'>
+                <h1>Dragon Ball Super CCG Database</h1>
+                <img src="img/projects/dbs-ccg-db.png" alt="Dragon Ball Super CCG Database API Response" height="450" class="mb-3 img-fluid rounded">
+                <div class="container">
+                    <p class="lead">
+                        Dragon Ball Super CCG Database is a database of Dragon Ball Super Cards API that is built similar to
+                        Scryfall's API. It contains all the cards prior to the latest Zenkai expansion (releases Q4 2022).
+                        End User's can query the database using a GET request with `q=` on the API endpoint `/cards/search`.
+                        <br>
+                        <em>This is currently an MVP for another project of mine.</em>
+                        <br>
+                        <p style="text-align:left">
+                            Planned updates:
+                            <ul style="text-align:left">
+                                <li>Additional Endpoints closer to the Scryfall API</li>
+                                <li>Updated Schema to the cards with the new Zenkai card attributes</li>
+                                <li>Zenkai Cards to be added</li>
+                            </ul>
+                        </p>
+                    </p>
+                    <button class="btn btn-dark">
+                        <a href="https://dbs-ccg-database.herokuapp.com/cards/search?q=son" target="_blank">Dragon Ball Database</a>
+                    </button>
+                </div>
+            </div>
+
+            <div class="section" id="dragon-ball-ccg-collection">
+                <h1>Dragon Ball Super CCG Collection</h1>
+                <img src="img/projects/dbs-ccg-collection.PNG" alt="Screenshot of adding cards to collection from the database" height="450" class="mb-3 img-fluid rounded">
+                <div class="container">
+                    <p class="lead">
+                        Dragon Ball Super CCG Collection is a web application to track and store your personal collection of Dragon Ball Super CCG cards!
+                        It utilizes the <a href='#dragon-ball-ccg-database'>Dragon Ball Super CCG Database</a> to search for cards based on the user's input.
+                        Additionally, if you have a Deck List that you want to see if you can make with your collection, there is an easy 2-step process for that too!
+                        Check out your collection on the fly on your mobile device with the Dragon Ball Super CCG Collection web app!
+                        <br>
+                        <em>Application is still under construction.</em>
+                        <br>
+                        <p style="text-align:left">
+                            Planned updates:
+                            <ul style="text-align:left">
+                                <li>Ability to remove cards from collection</li>
+                                <li>Importable web-link from dbs-deckplanet deck list to check against collection</li>
+                                <li>More Mobile accessibility</li>
+                                <li>Aesthetic changes</li>
+                            </ul>
+                        </p>
+                    </p>
+                    <button class="btn btn-light">
+                        <a href="https://dbs-ccg-owner-db.herokuapp.com/" target="_blank">Dragon Ball Collection</a>
+                    </button>
+                </div>
+            </div>
+
+            <div class="section colored" id="bandai-card-scraper">
+                <h1>Bandai TCG+ Card Scraper</h1>
+                <img src="img/projects/data-mining.png" alt="Data mine icon sourced from prettycon" class="mb-3 img-fluid rounded">
+                <div class="container">
+                    <p class="lead">
+                        The Bandai TCG+ Card Scraper is a tool to automatically make all the necessary API calls to the new Bandai TCG+ Card Database
+                        that was released in Q3 of 2022. The new database replaces the previous multitude of linked webpages that Bandai previously
+                        used to showcase all the Dragon Ball Super, Digimon, and One Piece cards.
+                        With the use of this tool, obtain all the cards of a given game in JSON format for later personal use!
+                        <br>
+                        <em>
+                            This was a forked repository from the old website that showcased all the cards and has been updated to utilize
+                            TypeScript and the new Bandai TCG+ database.
+                        </em>
+                        <br>
+                        <em>Scraper is under Github migration and updates.</em>
+                        <br>
+                        <p style="text-align:left">
+                            Planned updates:
+                            <ul style="text-align:left">
+                                <li>Ability to select each card game</li>
+                                <li>Progress updates while scraping the cards</li>
+                            </ul>
+                        </p>
+                    </p>
+                    <button class="btn btn-dark">
+                        <a href="https://github.com/TheMrFrick/dbs-scraper" target="_blank" rel="noopener noreferrer">Github Repo</a>
+                    </button>
+                </div>
             </div>
         </div>
-    </div>
-</div>
+    </main>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <script src="js/sidebar.js"></script>
+</body>
+
+</html>
